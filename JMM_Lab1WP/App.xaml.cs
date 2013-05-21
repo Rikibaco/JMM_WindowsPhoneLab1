@@ -7,11 +7,29 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using JMM_Lab1WP.Resources;
+using JMM_Lab1WP.ViewModels;
 
 namespace JMM_Lab1WP
 {
     public partial class App : Application
     {
+
+        private static ComputersData viewModel = null;
+
+
+        public static ComputersData ViewModel
+        {
+            get
+            {
+                // Delay creation of the view model until necessary
+                if (viewModel == null)
+                    viewModel = new ComputersData();
+
+                return viewModel;
+            }
+        }
+
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -61,12 +79,16 @@ namespace JMM_Lab1WP
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            App.ViewModel.LoadData();
+
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+
+
         }
 
         // Code to execute when the application is deactivated (sent to background)
