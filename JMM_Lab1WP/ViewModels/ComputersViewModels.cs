@@ -63,6 +63,8 @@ namespace JMM_Lab1WP.ViewModels
                 }
             }
 
+           
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string p)
         {

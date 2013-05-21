@@ -20,23 +20,44 @@
         <phone:Pivot Title="MY APPLICATION" Margin="0,-10,0,10">
             <!--Pivot item one-->
             <phone:PivotItem Header="Strana1">
-                <Grid Name="ContentPanel">
+               
                 <phone:LongListSelector x:Name="LongListSelector1" ItemsSource="{Binding computers}" SelectionChanged="LongListSelector1_SelectionChanged" >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Margin="2">
-                                <TextBlock Text="{Binding Name}" TextWrapping="Wrap"></TextBlock>
-                                    <TextBlock Text="{Binding Description}" TextWrapping="Wrap"></TextBlock>
-                            </StackPanel>
+                            <Grid Margin="2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                        <TextBlock  Grid.Column="1" Text="{Binding Name}" TextWrapping="Wrap"></TextBlock>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Description}" TextWrapping="Wrap"></TextBlock>
+                                    <Image Grid.RowSpan="2" Margin="3" ></Image>
+                                </Grid>
                         </DataTemplate>
                     </phone:LongListSelector.ItemTemplate>
                 </phone:LongListSelector>
-                </Grid>
+                
             </phone:PivotItem>
 
             <!--Pivot item two-->
             <phone:PivotItem Header="Strana2">
-                <Grid/>
+                
+                    
+                       
+                            <Grid Margin="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click"> Dodadi stavka</Button>
+                                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">Zemi od baza</Button>
+                            </Grid>
+                        
+                  
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>

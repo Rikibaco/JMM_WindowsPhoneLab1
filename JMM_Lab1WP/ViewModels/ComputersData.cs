@@ -31,13 +31,19 @@ namespace JMM_Lab1WP.ViewModels
 
         public void LoadData()
         {
-            this.Computers.Add(new ComputersViewModels() {ID="0", Name="Dell"  ,Description="dsadsdfafdg"});
+            this.Computers.Add(new ComputersViewModels() { ID="0", Name="Dell"  ,Description="dsadsdfafdg"});
             this.Computers.Add(new ComputersViewModels() { ID = "1", Name = "Assus", Description = "dsadsdfafdg" });
-            this.Computers.Add(new ComputersViewModels() { ID = "2", Name = "Acer", Description = "skapan kompjuter od muki trubadurata" });
+            this.Computers.Add(new ComputersViewModels() { ID = "2", Name = "Acer", Description = "adsfaff" });
             
             this.IsDataLoaded = true;
         }
 
+
+         public void AddComputer(ComputersViewModels cvm)
+            {
+                Computers.Add(cvm);
+                NotifyPropertyChanged("Computers");
+            }
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String p)

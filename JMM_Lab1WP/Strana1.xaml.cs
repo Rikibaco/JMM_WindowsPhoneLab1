@@ -21,7 +21,16 @@ namespace JMM_Lab1WP
 
         private void LongListSelector1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
+            
+
+            NavigationService.Navigate(new Uri("/ComputerDetails.xaml?selectedItem=" +(LongListSelector1.SelectedItem as ComputersViewModels ).ID, UriKind.Relative));
+
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/DodadiComputer.xaml", UriKind.Relative));
         }
     }
 }

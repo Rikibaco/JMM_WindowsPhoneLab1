@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:vm="clr-namespace:JMM_Lab1WP.ViewModels">
     <vm:ComputersData.Computers>
-        <vm:ComputersViewModels ID="0" Name="design one" Description="Maecenas praesent accumsan bibendum" />
-        <vm:ComputersViewModels ID="1" Name="design two"  Description="Pharetra placerat pulvinar sagittis senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent"/>
-        <vm:ComputersViewModels ID="2" Name="design three"  Description="Accumsan bibendum dictumst eleifend facilisi faucibus habitant inceptos interdum lobortis nascetur pharetra placerat"/>
+        <vm:ComputersViewModels ID="0" Name="design one" Description="desc1" />
+        <vm:ComputersViewModels ID="1" Name="design two"  Description="desc2"/>
+        <vm:ComputersViewModels ID="2" Name="design three"  Description="desc3"/>
     </vm:ComputersData.Computers>
 </vm:ComputersData>
